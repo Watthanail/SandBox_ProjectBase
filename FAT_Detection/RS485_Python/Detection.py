@@ -1,6 +1,7 @@
 from pymodbus.client import ModbusSerialClient
 import serial
 import keyboard
+import time
 
 # Define function to read holding registers
 def read_holding_registers(address, count, slave):
@@ -32,4 +33,6 @@ while True:
     
     if keyboard.is_pressed('q'):
         print("user need to quit the app")
-        break  
+        break
+
+    time.sleep(0.1)
